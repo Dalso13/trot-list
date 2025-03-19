@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.navigation.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 
 class Sing1Fragment : Fragment() {
@@ -20,7 +22,7 @@ class Sing1Fragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+        // 네비게이션 화면 전환
         val view = inflater.inflate(R.layout.fragment_sing1, container, false)
 
         view.findViewById<ImageView>(R.id.img2).setOnClickListener {
@@ -30,6 +32,10 @@ class Sing1Fragment : Fragment() {
         view.findViewById<ImageView>(R.id.img3).setOnClickListener {
             it.findNavController().navigate(R.id.action_sing1Fragment_to_sing3Fragment)
         }
+
+
+
+
 
         return view
     }
