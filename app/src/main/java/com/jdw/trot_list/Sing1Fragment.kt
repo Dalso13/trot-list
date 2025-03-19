@@ -33,7 +33,18 @@ class Sing1Fragment : Fragment() {
             it.findNavController().navigate(R.id.action_sing1Fragment_to_sing3Fragment)
         }
 
+        // 리스트 띄우기
+        val rv = view.findViewById<RecyclerView>(R.id.rv)
 
+        val items = mutableListOf<String>(
+            "막걸리 한잔",
+            "찐이야",
+            "니가 왜 거기서 나와"
+        )
+
+        val rvAdapter = RVAdapter(items)
+        rv.adapter = rvAdapter
+        rv.layoutManager = LinearLayoutManager(context)
 
 
 
